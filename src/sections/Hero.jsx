@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-<img src="/profile.webp" alt="Profile" />
+import profile from "D:/Mohana Portfolio/mohana-portfolio/public/resume/Profile.webp";
 import useFadeIn from "../hooks/useFadeIn";
 import "./Hero.css";
 

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Header.css";
-<img src="/logo.webp" alt="Logo" />
+import logo from "D:/Mohana Portfolio/mohana-portfolio/public/resume/Logo.webp";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
