@@ -1,0 +1,158 @@
+.skills {
+  min-height: 100vh;
+  background: #ffffff;
+  padding: 100px 8%;
+  position: relative;
+}
+
+/* BACKDROP */
+.skills-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(12px);
+  z-index: 80;
+}
+
+/* CONTAINER */
+.skills-container {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  z-index: 40;
+}
+
+/* TITLE */
+.skills-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 42px;
+  color: var(--brown);
+  margin-bottom: 18px;
+}
+
+/* SUBTITLE */
+.skills-subtitle {
+  font-size: 17px;
+  color: #555;
+  max-width: 720px;
+  margin: 0 auto 60px;
+  line-height: 1.7;
+}
+
+/* GRID */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px 40px;
+}
+
+/* CARD */
+.skill-card {
+  background: #ffffff;
+  padding: 24px 26px;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+
+  /* 🔥 Arrival animation FIX */
+  opacity: 0;
+  animation: skillFadeUp 0.7s ease forwards;
+
+  transition:
+    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ARRIVAL WITHOUT TRANSFORM CONFLICT */
+@keyframes skillFadeUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ✅ HOVER POP-UP EFFECT (NOW WORKS) */
+.skill-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 30px 65px rgba(122, 74, 46, 0.25);
+}
+
+/* HEADER */
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.skill-header h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+}
+
+.skill-header span {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--brown);
+}
+
+/* BAR */
+.skill-bar {
+  height: 8px;
+  background: #eee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--brown), #a67855);
+  border-radius: 8px;
+  transition: width 1.4s ease;
+}
+
+/* MODAL */
+.skill-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-modal-card {
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 36px 42px;
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.2);
+  animation: modalPop 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes modalPop {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}

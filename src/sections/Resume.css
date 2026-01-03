@@ -1,0 +1,55 @@
+.resume {
+  min-height: 80vh;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 8%;
+}
+
+/* CONTAINER */
+.resume-container {
+  max-width: 900px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* TITLE */
+.resume-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 42px;
+  color: var(--brown);
+  margin-bottom: 22px;
+}
+
+/* DESCRIPTION */
+.resume-desc {
+  font-size: 17px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+/* CTA */
+.resume-cta {
+  display: flex;
+  justify-content: center;
+}
+
+/* BUTTON (REUSE GLOBAL .btn) */
+.resume .btn {
+  padding: 14px 34px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .resume-title {
+    font-size: 34px;
+  }
+
+  .resume-desc {
+    font-size: 16px;
+  }
+}

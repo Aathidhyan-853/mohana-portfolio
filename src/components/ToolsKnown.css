@@ -1,0 +1,93 @@
+.tools-known {
+  width: 100%;
+  background: #faf6f0; /* same family as skills/resume */
+  padding: 90px 0 80px;
+}
+
+.tools-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.tools-title {
+  color: #8b6f4e;
+  letter-spacing: 5px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 35px;
+}
+
+/* marquee container */
+.tools-marquee {
+  position: relative;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+/* fade edges */
+.tools-marquee::before,
+.tools-marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 2;
+}
+
+.tools-marquee::before {
+  left: 0;
+  background: linear-gradient(to right, #faf6f0, transparent);
+}
+
+.tools-marquee::after {
+  right: 0;
+  background: linear-gradient(to left, #faf6f0, transparent);
+}
+
+.tools-track {
+  display: flex;
+  gap: 80px;
+  width: max-content;
+  animation: scroll-left 30s linear infinite;
+}
+
+.tool-item {
+  color: #5a4632;
+  font-size: 18px;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0.85;
+  transition: all 0.3s ease;
+}
+
+.tool-item:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* animation */
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .tools-known {
+    padding: 70px 0;
+  }
+
+  .tool-item {
+    font-size: 15px;
+  }
+
+  .tools-track {
+    gap: 50px;
+  }
+}

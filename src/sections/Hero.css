@@ -1,0 +1,186 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  padding: 120px 10% 60px;
+  background: #ffffff;
+}
+
+/* LEFT */
+.hero-left {
+  flex: 1;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* TITLE GROUP */
+.hero-title-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+/* I AM */
+.hero-intro {
+  font-size: 26px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+/* NAME */
+.hero-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 60px;
+  color: var(--brown);
+  margin-bottom: 8px;
+  line-height: 1.15;
+}
+
+/* ROLE */
+.hero-role {
+  font-size: 26px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 28px;
+}
+
+/* PARAGRAPHS */
+.hero-desc,
+.hero-sub {
+  max-width: 580px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  line-height: 1.7;
+}
+
+.hero-desc {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: #222;
+}
+
+.hero-sub {
+  font-size: 17px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* CENTER BLOCK */
+.hero-center-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 26px;
+}
+
+.hero-availability {
+  font-size: 16px;
+  margin-bottom: 28px;
+}
+
+/* CTA */
+.hero-cta {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+}
+
+/* ===== BUTTONS (UNIFIED – VIEW MY WORK STYLE) ===== */
+.btn {
+  position: relative;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  letter-spacing: 0.4px;
+  overflow: hidden;
+  background: transparent;
+  color: var(--brown);
+  border: 2px solid var(--brown);
+  transition: all 0.35s ease;
+}
+
+/* FILL ANIMATION */
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--brown);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+  z-index: -1;
+}
+
+.btn:hover::before {
+  transform: scaleX(1);
+}
+
+.btn:hover {
+  color: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
+}
+
+.btn:active {
+  transform: translateY(-2px) scale(0.98);
+}
+
+/* IMAGE */
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image-wrapper {
+  position: relative;
+}
+
+.image-shadow {
+  position: absolute;
+  inset: 0;
+  background: rgba(122, 74, 46, 0.18);
+  border-radius: 32px;
+  filter: blur(45px);
+  transform: translateY(24px);
+}
+
+.image-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: 0 30px 55px rgba(0, 0, 0, 0.15);
+}
+
+.image-card img {
+  width: 330px;
+  border-radius: 24px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column-reverse;
+  }
+
+  .hero-name {
+    font-size: 46px;
+  }
+
+  .hero-desc,
+  .hero-sub {
+    text-align: center;
+  }
+
+  .hero-cta {
+    justify-content: center;
+  }
+}
