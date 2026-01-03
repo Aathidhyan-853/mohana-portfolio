@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import profile from "../assets/profile.webp";
+import profile from "../assets/Profile.webp";
 import useFadeIn from "../hooks/useFadeIn";
 import "./Hero.css";
 
